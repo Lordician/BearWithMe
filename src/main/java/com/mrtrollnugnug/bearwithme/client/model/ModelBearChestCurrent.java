@@ -358,6 +358,52 @@ public class ModelBearChestCurrent extends ModelBiped {
 		
 		//I had to remove the individual renders of the parts because they are now children of the bodyparts to make them move with those.
 		//Added the following lines according to the tutorial: http://www.minecraftforum.net/forums/mapping-and-modding-java-edition/mapping-and-modding-tutorials/1571595-1-10-2-how-to-code-custom-3d-armor-models
+		/* OLD RENDER CODE FOR FUTURE REFERENCE
+ 		GlStateManager.pushMatrix();
+        GlStateManager.translate(this.CubeName3.offsetX, this.CubeName3.offsetY, this.CubeName3.offsetZ);
+        GlStateManager.translate(this.CubeName3.rotationPointX * f5, this.CubeName3.rotationPointY * f5, this.CubeName3.rotationPointZ * f5);
+        GlStateManager.scale(1.2000000476837158D, 1.0D, 1.2000000476837158D);
+        GlStateManager.translate(-this.CubeName3.offsetX, -this.CubeName3.offsetY, -this.CubeName3.offsetZ);
+        GlStateManager.translate(-this.CubeName3.rotationPointX * f5, -this.CubeName3.rotationPointY * f5, -this.CubeName3.rotationPointZ * f5);
+        this.CubeName3.render(f5);
+        GlStateManager.popMatrix();
+        this.lghk52222not.render(f5);
+        this.lghk22.render(f5);
+        GlStateManager.pushMatrix();
+        GlStateManager.translate(this.CubeName32.offsetX, this.CubeName32.offsetY, this.CubeName32.offsetZ);
+        GlStateManager.translate(this.CubeName32.rotationPointX * f5, this.CubeName32.rotationPointY * f5, this.CubeName32.rotationPointZ * f5);
+        GlStateManager.scale(1.2000000476837158D, 1.0D, 1.2000000476837158D);
+        GlStateManager.translate(-this.CubeName32.offsetX, -this.CubeName32.offsetY, -this.CubeName32.offsetZ);
+        GlStateManager.translate(-this.CubeName32.rotationPointX * f5, -this.CubeName32.rotationPointY * f5, -this.CubeName32.rotationPointZ * f5);
+        this.CubeName32.render(f5);
+        GlStateManager.popMatrix();
+        this.field_78115_e25.render(f5);
+        this.field_78115_e26.render(f5);
+        this.field_78115_e24.render(f5);
+        this.field_78115_e253.render(f5);
+        this.field_78115_e23.render(f5);
+        this.lghk222.render(f5);
+        this.field_78115_e233.render(f5);
+        this.field_78115_e27.render(f5);
+        this.lghk5222not2.render(f5);
+        this.field_78115_e234.render(f5);
+        this.field_78115_e252.render(f5);
+        this.field_78115_e2.render(f5);
+        this.field_78115_e232.render(f5);
+        this.field_78115_e255.render(f5);
+        this.lghk5222not.render(f5);
+        this.field_78115_e22.render(f5);
+        this.field_78115_e254.render(f5);
+        GlStateManager.pushMatrix();
+        GlStateManager.translate(this.CubeName.offsetX, this.CubeName.offsetY, this.CubeName.offsetZ);
+        GlStateManager.translate(this.CubeName.rotationPointX * f5, this.CubeName.rotationPointY * f5, this.CubeName.rotationPointZ * f5);
+        GlStateManager.scale(1.2000000476837158D, 1.0D, 1.2000000476837158D);
+        GlStateManager.translate(-this.CubeName.offsetX, -this.CubeName.offsetY, -this.CubeName.offsetZ);
+        GlStateManager.translate(-this.CubeName.rotationPointX * f5, -this.CubeName.rotationPointY * f5, -this.CubeName.rotationPointZ * f5);
+        this.CubeName.render(f5);
+        GlStateManager.popMatrix();
+		 */
+		
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 	}
