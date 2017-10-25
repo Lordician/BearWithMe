@@ -17,17 +17,20 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
-    @Override
-    public void preInit () {
+	@Override
+	public void preInit() {
 
-        super.preInit();
-        
-        ContentHandler.onClientPreInit();
-        
-        RenderingRegistry.registerEntityRenderingHandler(EntityGrizzlyBear.class, manager -> new RenderGrizzlyBear(manager, new ModelPolarBear(), 0.7F));
+		super.preInit();
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityBlackBear.class, manager -> new RenderBlackBear(manager, new ModelPolarBear(), 0.7F));
+		ContentHandler.onClientPreInit();
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityPandaBear.class, manager -> new RenderPandaBear(manager, new ModelPandaBear(), 0.7F));
-    }
+		RenderingRegistry.registerEntityRenderingHandler(EntityGrizzlyBear.class,
+				manager -> new RenderGrizzlyBear(manager, new ModelPolarBear(), 0.7F));
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityBlackBear.class,
+				manager -> new RenderBlackBear(manager, new ModelPolarBear(), 0.7F));
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityPandaBear.class,
+				manager -> new RenderPandaBear(manager, new ModelPandaBear(), 0.7F));
+	}
 }

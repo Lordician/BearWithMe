@@ -13,23 +13,24 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderBlackBear extends RenderLiving<EntityBlackBear> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation("bearwithme", "textures/entity/bear_black.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation("bearwithme",
+			"textures/entity/bear_black.png");
 
-    public RenderBlackBear (RenderManager renderer, ModelBase model, float shadowSize) {
+	public RenderBlackBear(RenderManager renderer, ModelBase model, float shadowSize) {
 
-        super(renderer, model, shadowSize);
-    }
+		super(renderer, model, shadowSize);
+	}
 
-    @Override
-    protected ResourceLocation getEntityTexture (EntityBlackBear entity) {
+	@Override
+	protected ResourceLocation getEntityTexture(EntityBlackBear entity) {
 
-        return TEXTURE;
-    }
+		return TEXTURE;
+	}
 
-    @Override
-    protected void preRenderCallback (EntityBlackBear entitylivingbaseIn, float partialTickTime) {
+	@Override
+	protected void preRenderCallback(EntityBlackBear entitylivingbaseIn, float partialTickTime) {
 
-        GlStateManager.scale(1.2F, 1.2F, 1.2F);
-        super.preRenderCallback(entitylivingbaseIn, partialTickTime);
-    }
+		GlStateManager.scale(1.2F, 1.2F, 1.2F);
+		super.preRenderCallback(entitylivingbaseIn, partialTickTime);
+	}
 }

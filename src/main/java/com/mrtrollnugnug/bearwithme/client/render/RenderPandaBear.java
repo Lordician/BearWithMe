@@ -13,27 +13,28 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderPandaBear extends RenderLiving<EntityPandaBear> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation("bearwithme", "textures/entity/bear_panda.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation("bearwithme",
+			"textures/entity/bear_panda.png");
 
-    public RenderPandaBear (RenderManager renderManager, ModelPandaBear model, float shadowSize) {
+	public RenderPandaBear(RenderManager renderManager, ModelPandaBear model, float shadowSize) {
 
-        super(renderManager, model, shadowSize);
-    }
+		super(renderManager, model, shadowSize);
+	}
 
-    @Override
-    protected ResourceLocation getEntityTexture (EntityPandaBear entity) {
+	@Override
+	protected ResourceLocation getEntityTexture(EntityPandaBear entity) {
 
-        return TEXTURE;
-    }
+		return TEXTURE;
+	}
 
-    @Override
-    protected void preRenderCallback (EntityPandaBear entity, float partialTickTime) {
+	@Override
+	protected void preRenderCallback(EntityPandaBear entity, float partialTickTime) {
 
-        if (entity.isChild()) {
+		if (entity.isChild()) {
 
-            GlStateManager.scale(0.5, 0.5, 0.5);
-        }
+			GlStateManager.scale(0.5, 0.5, 0.5);
+		}
 
-        super.preRenderCallback(entity, partialTickTime);
-    }
+		super.preRenderCallback(entity, partialTickTime);
+	}
 }

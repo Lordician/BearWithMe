@@ -12,20 +12,20 @@ import net.minecraft.item.ItemStack;
 public class ItemBlackBootsArmor extends ItemArmor {
 
 	public static final String BLACK_BOOTS = "bearwithme:textures/models/armor/black_bear_boots_legs.png";
-	
+
 	public ItemBlackBootsArmor(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 	}
-	
+
 	@Override
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot,
 			ModelBiped _default) {
 		return new ModelBearBoots();
 	}
-	
+
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
 		return BLACK_BOOTS;
-		
+
 	}
 }

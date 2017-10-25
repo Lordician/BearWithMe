@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"   ",
+		"bbb",
+		"b b"
+	],
+	"key": {
+		"b": {
+			"item": "bearwithme:hide_bear",
+			"data": 1
+		}
+	},
+	"result": {
+		"item": "bearwithme:grizzly_bear_head"
+	}
+}

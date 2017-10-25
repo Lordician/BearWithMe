@@ -11,21 +11,21 @@ import net.minecraft.item.ItemStack;
 
 public class ItemGrizzlyBootsArmor extends ItemArmor {
 
-	public static final String GRIZZLY_BOOTS = "bearwithme:textures/models/armor/grizzly_bear_boots.png";
-	
+	public static final String GRIZZLY_BOOTS = "bearwithme:textures/models/armor/grizzly_bear_boots_legs.png";
+
 	public ItemGrizzlyBootsArmor(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 	}
-	
+
 	@Override
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot,
 			ModelBiped _default) {
 		return new ModelBearBoots();
 	}
-	
+
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
 		return GRIZZLY_BOOTS;
-		
+
 	}
 }

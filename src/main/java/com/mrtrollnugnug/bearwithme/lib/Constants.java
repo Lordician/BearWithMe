@@ -7,17 +7,17 @@ import org.apache.logging.log4j.Logger;
 
 public class Constants {
 
-    public static final String MOD_ID = "bearwithme";
+	public static final String MOD_ID = "bearwithme";
 
-    public static final String MOD_NAME = "Bear With Me";
+	public static final String MOD_NAME = "Bear With Me";
 
-    public static final String VERSION_NUMBER = "1.0.0.0";
+	public static final String VERSION_NUMBER = "1.0.0.0";
 
-    public static final String CLIENT_PROXY_CLASS = "com.mrtrollnugnug.bearwithme.client.ClientProxy";
+	public static final String CLIENT_PROXY_CLASS = "com.mrtrollnugnug.bearwithme.client.ClientProxy";
 
-    public static final String SERVER_PROXY_CLASS = "com.mrtrollnugnug.bearwithme.common.CommonProxy";
+	public static final String SERVER_PROXY_CLASS = "com.mrtrollnugnug.bearwithme.common.CommonProxy";
 
-    public static final Random RANDOM = new Random();
+	public static final Random RANDOM = new Random();
 
-    public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
+	public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
 }

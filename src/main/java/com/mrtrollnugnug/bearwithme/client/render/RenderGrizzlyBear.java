@@ -13,23 +13,24 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderGrizzlyBear extends RenderLiving<EntityGrizzlyBear> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation("bearwithme", "textures/entity/bear_grizzly.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation("bearwithme",
+			"textures/entity/bear_grizzly.png");
 
-    public RenderGrizzlyBear (RenderManager renderManager, ModelBase model, float shadowSize) {
+	public RenderGrizzlyBear(RenderManager renderManager, ModelBase model, float shadowSize) {
 
-        super(renderManager, model, shadowSize);
-    }
+		super(renderManager, model, shadowSize);
+	}
 
-    @Override
-    protected ResourceLocation getEntityTexture (EntityGrizzlyBear entity) {
+	@Override
+	protected ResourceLocation getEntityTexture(EntityGrizzlyBear entity) {
 
-        return TEXTURE;
-    }
+		return TEXTURE;
+	}
 
-    @Override
-    protected void preRenderCallback (EntityGrizzlyBear entitylivingbaseIn, float partialTickTime) {
+	@Override
+	protected void preRenderCallback(EntityGrizzlyBear entitylivingbaseIn, float partialTickTime) {
 
-        GlStateManager.scale(1.2F, 1.2F, 1.2F);
-        super.preRenderCallback(entitylivingbaseIn, partialTickTime);
-    }
+		GlStateManager.scale(1.2F, 1.2F, 1.2F);
+		super.preRenderCallback(entitylivingbaseIn, partialTickTime);
+	}
 }

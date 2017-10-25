@@ -9,32 +9,32 @@ public class ItemHide extends Item {
 
 	public ItemHide() {
 		super();
-		 setHasSubtypes(true);		
+		setHasSubtypes(true);
 	}
-	
+
 	public static String[] varients = new String[] { "black", "grizzly", "panda", "polar" };
-	
-    @Override
-    public int getMetadata (int damage) {
 
-        return damage;
-    }
-	
-    @Override
-    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
-    	for (int meta = 0; meta < varients.length; meta++) {
-            subItems.add(new ItemStack(this, 1, meta));
-    	}
-    }
-	
-	  @Override
-	    public String getUnlocalizedName (ItemStack stack) {
+	@Override
+	public int getMetadata(int damage) {
 
-	        final int meta = stack.getMetadata();
+		return damage;
+	}
 
-	        if (!(meta >= 0 && meta < varients.length))
-	            return super.getUnlocalizedName() + "." + varients[0];
+	@Override
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+		for (int meta = 0; meta < varients.length; meta++) {
+			subItems.add(new ItemStack(this, 1, meta));
+		}
+	}
 
-	        return super.getUnlocalizedName() + "." + varients[meta];
-	  }		
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+
+		final int meta = stack.getMetadata();
+
+		if (!(meta >= 0 && meta < varients.length))
+			return super.getUnlocalizedName() + "." + varients[0];
+
+		return super.getUnlocalizedName() + "." + varients[meta];
+	}
 }

@@ -16,33 +16,30 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Constants.MOD_ID, name = Constants.MOD_NAME, version = Constants.VERSION_NUMBER)
 public class BearWithMe {
 
-    @Mod.Instance(Constants.MOD_ID)
-    public static BearWithMe instance;
+	@Mod.Instance(Constants.MOD_ID)
+	public static BearWithMe instance;
 
-    @SidedProxy(clientSide = Constants.CLIENT_PROXY_CLASS, serverSide = Constants.SERVER_PROXY_CLASS)
-    public static CommonProxy proxy;
+	@SidedProxy(clientSide = Constants.CLIENT_PROXY_CLASS, serverSide = Constants.SERVER_PROXY_CLASS)
+	public static CommonProxy proxy;
 
-    
-    @EventHandler
-    public void preInit (FMLPreInitializationEvent event) {
-    	
-        ConfigurationHandler.initConfig(event.getSuggestedConfigurationFile()); 	
-    	MinecraftForge.EVENT_BUS.register(new ContentHandler());
-    	ContentHandler.initBlocks();
-        ContentHandler.initItems();
-        ContentHandler.initRecipes();
-        proxy.preInit();
-    }
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
 
-    @EventHandler
-    public void init (FMLInitializationEvent event) {
+		ConfigurationHandler.initConfig(event.getSuggestedConfigurationFile());
+		MinecraftForge.EVENT_BUS.register(new ContentHandler());
+		proxy.preInit();
+	}
 
-        proxy.init();
-    }
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
 
-    @EventHandler
-    public void postInit (FMLPostInitializationEvent event) {
+		proxy.init();
+	}
 
-        proxy.postInit();
-    }
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event) {
+
+		proxy.postInit();
+	}
 }
